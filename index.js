@@ -1,5 +1,5 @@
 class api {
-    get (input) {
+    static get (input) {
       console.log(input);
       return input.toString(2);
     }
