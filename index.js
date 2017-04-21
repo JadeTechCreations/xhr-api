@@ -13,14 +13,14 @@ class api {
     }
 
     post (input) {
-      return input.toString(2);
+      return this.put(input);
     }
 
     put (input) {
       var config = {
         headers: {'Content-Type': 'multipart/form-data'}
       }
-      return axios.put('http://localhost:7700//pdm/v1/validation2',
+      return axios.put('http://localhost:7700/pdm/v1/validation2',
           input,
           config
         )
