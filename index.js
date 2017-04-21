@@ -1,12 +1,15 @@
-var request = require('request');
+var axios = require('axios');
 
 class api {
     get (input) {
-      return request('http://www.google.com', function (error, response, body) {
-        console.log('error:', error); // Print the error if one occurred
-        console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-        console.log('body:', body); // Print the HTML for the Google homepage.
-      });
+      return axios.get('https://api.github.com/users/codeheaven-io')
+        .then(function(response) {
+          console.log(response.data);
+          console.log(response.status);
+          console.log(response.statusText);
+          console.log(response.headers);
+          console.log(response.config);
+        });
     }
 
     post (input) {
