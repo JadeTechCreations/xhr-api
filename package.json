@@ -20,5 +20,8 @@
     "babel-core": "^6.5.1",
     "babel-eslint": "^7.0.0",
     "eslint": "^1.10.3"
+  },
+  "dependencies": {
+    "request": "^2.81.0"
   }
 }
