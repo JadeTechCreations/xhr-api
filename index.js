@@ -1,3 +1,4 @@
 exports.get = function(input) {
-    return input.toString(2);
+  console.log(input);
+  return input.toString(2);
 };
