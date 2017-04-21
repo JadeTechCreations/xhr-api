@@ -17,7 +17,20 @@ class api {
     }
 
     put (input) {
-      return input.toString(2);
+      var config = {
+        headers: {'Content-Type': 'multipart/form-data'}
+      }
+      return axios.put('http://localhost:7700//pdm/v1/validation2',
+          input,
+          config
+        )
+        .then(function(response) {
+          console.log(response.data);
+          console.log(response.status);
+          console.log(response.statusText);
+          console.log(response.headers);
+          console.log(response.config);
+        });
     }
 
     delete (input) {
