@@ -3,8 +3,9 @@ var BASE_URL = 'http://localhost:7700';
 
 class api {
 
-  get (url) {
-    return axios.get(BASE_URL+url);
+  get (url, callback) {
+    return axios.get(BASE_URL+url)
+      .then(callback);
   }
 
   post (input) {
