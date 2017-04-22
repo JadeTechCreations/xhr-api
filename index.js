@@ -4,10 +4,7 @@ var BASE_URL = 'http://localhost:7700';
 class api {
 
   get (url) {
-    return axios.get(BASE_URL+url)
-      .then(function(response) {
-        return response.data;
-      });
+    return axios.get(BASE_URL+url);
   }
 
   post (input) {
